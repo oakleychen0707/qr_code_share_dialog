@@ -49,6 +49,7 @@ private void showShareCodeDialog() {
     // Generate QR Code
     try {
         int size = 180;
+        // shortShareCode can be any string value that you want to encode in the QR code.
         qrCodeBitmap = generateQRCode(this.shortShareCode, size, size);
         qrCodeImg.setImageBitmap(qrCodeBitmap);
     } catch (Exception e) {
