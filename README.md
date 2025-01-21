@@ -29,9 +29,11 @@ The main function `showShareCodeDialog()` creates and displays a dialog that con
 
 The QR Code is generated using the `generateQRCode()` method, and error handling is included for cases where QR Code generation fails.
 
-### Code Snippet
+---
 
-## QR Code Share Dialog Implementation
+## Code Snippet
+
+### QR Code Share Dialog Implementation
 
 ```java
 private void showShareCodeDialog() {
@@ -81,7 +83,7 @@ private void showShareCodeDialog() {
 }
 ```
 
-## QR Code Generation Method
+### QR Code Generation Method
 
 ```java
 private Bitmap generateQRCode(String content, int width, int height) throws WriterException {
@@ -103,7 +105,7 @@ private Bitmap generateQRCode(String content, int width, int height) throws Writ
     }
 ```
 
-## Saving QR Code to Gallery
+### Saving QR Code to Gallery
 
 ```java
 private void saveQRCodeToGallery(Context context, Bitmap bitmap) {
@@ -144,6 +146,18 @@ private void saveQRCodeToGallery(Context context, Bitmap bitmap) {
         }
     }
 ```
+
+---
+
+## UI Layout Overview
+
+This dialog layout is defined in `dialog_ibon_share_code.xml` and consists of the following components:
+
+- **TextView** (`ibon_dialog_ibon_sharecode_txt`): Displays the short share code.
+- **ImageView** (`ibon_dialog_qrcode_image`): Displays the generated QR code image.
+- **Button** (`copy_button`): Allows users to copy the share code to clipboard.
+- **Button** (`download_qrcode_button`): Allows users to download the QR code to their gallery.
+- **ImageView** (`close_icon`): Allows users to close the dialog.
 
 ---
 
