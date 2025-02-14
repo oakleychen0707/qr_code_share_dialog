@@ -1,0 +1,4 @@
+dependencies {
+  // QR code
+    implementation 'com.google.zxing:core:3.5.1'
+}
